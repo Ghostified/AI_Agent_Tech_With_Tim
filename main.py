@@ -5,3 +5,8 @@ from langchain_anthropic import ChatAnthropic
 
 load_dotenv()
 
+llm=ChatOpenAI(model="gpt-4o-mini")
+#llm=ChatAnthropic(model="claude-opus-4-20250514")
+
+
+
