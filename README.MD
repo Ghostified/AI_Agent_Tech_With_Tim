@@ -1,25 +1,42 @@
-Simple AI Agent:
-<img href="/home/ghost/Projects/Python/AI_Agent/codetoflow.png"></img>
-Here is the detailed sequence diagram for the provided code:Explanation:
+# Research Assistant Agent README
 
-1. The user initiates a request to the agent, asking "What is the capital of France?" and providing their name "Alice".
+## Problem Statement
+This code aims to implement a research assistant agent capable of generating structured research responses using large language models. The agent is designed to answer queries while providing detailed output in a predefined format, including topic, summary, sources, and tools used.
 
-2. The agent invokes the language model (LLM) with the user's query and name as input parameters.
+## Objectives
+1. **Build a structured response system** that enforces consistent output formatting for research queries using Pydantic models.
+2. **Implement model flexibility** by supporting multiple LLM providers (OpenAI, Anthropic) through configurable API endpoints and keys.
+3. **Create an extensible agent framework** that allows for future integration of research tools and data sources while maintaining verbose execution tracking.
 
-3. The LLM generates a raw response to the agent's request.
 
-4. The agent passes the raw response to the parser, which is responsible for parsing the response and creating a structured ResearchResponse object.
 
-5. The parser creates the ResearchResponse object and returns it to the agent.
+## Summary of How the Code Works
 
-6. The agent then returns the structured response to the user.
+This project creates a **research assistant agent** that uses large language models (LLMs) to answer questions and return **structured responses**.
 
-The key interactions in this sequence diagram are:
+### Key Steps:
 
-The user initiating the request to the agent
-The agent invoking the LLM to generate a raw response
-The agent passing the raw response to the parser to create a structured response
-The parser creating the ResearchResponse object
-The agent returning the structured response to the user
-The diagram also includes the relevant participants (User, Agent, LLM, Parser, and ResearchResponse) and their interactions, as well as the function calls and parameter details.
+1. **Environment Setup**
+   - Loads API keys from `.env` files using `dotenv`.
+   - Configures the LLM (currently set to use OpenAI-compatible models via OpenRouter).
 
+2. **Structured Output**
+   - Defines a `ResearchResponse` schema using Pydantic to enforce response structure: topic, summary, sources, and tools used.
+   - Uses a `PydanticOutputParser` to convert raw model outputs into this structured format.
+
+3. **Prompt Template**
+   - Sets up a system prompt instructing the model to act as a research assistant.
+   - Includes formatting instructions so the model knows how to structure its response.
+
+4. **Agent System**
+   - Creates a basic **tool-calling agent** using LangChain.
+   - Currently no tools are added, but the framework is ready for future extensions.
+
+5. **Execution**
+   - Runs a sample query: `"What is the capital of France?"`
+   - Prints both the raw response and the parsed structured result.
+
+---
+
+Summary  
+**You give it a question → it asks an AI model → gets a structured answer with topic, summary, sources, and tools used.**
