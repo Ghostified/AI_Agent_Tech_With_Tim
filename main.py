@@ -27,7 +27,7 @@ class ResearchResponse(BaseModel):
 #llm=ChatAnthropic(model="claude-opus-4-20250514")
 llm = ChatOpenAI(model="gpt-4o-mini",
                  openai_api_base ="https://openrouter.ai/api/v1",
-                 openai_api_key =deepseek_api_key
+                 openai_api_key = deepseek_api_key
                  )
 
 
@@ -67,6 +67,3 @@ print(raw_response)
 #Create a structured response 
 structured_response = parser.parse(raw_response.get("output")[0]["text"])
 print(structured_response)
-
-
-
