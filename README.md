@@ -18,9 +18,3 @@ The assistant works by:
 ![Sequence Diagrams](image-1.png)
 # Sequence Diagram
 
-```mermaid
-graph TD
-    A[<img src="image-1.png" width="20" /> Start] --> B{Question}
-    B -->|Yes| C[Result A]
-    B -->|No| D[Result B]
-    ```
