@@ -14,6 +14,12 @@ The assistant works by:
 - Using a language model to answer queries.
 - Enforcing a structured output format.
 - Optionally calling tools in the future.
+## How It Works
+
+The assistant works by:
+- Using a language model to answer queries.
+- Enforcing a structured output format.
+- Optionally calling tools in the future.
 
 ![Sequence Diagrams](image-1.png)
 # Sequence Diagram
