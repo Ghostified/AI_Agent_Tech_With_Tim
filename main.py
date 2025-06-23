@@ -42,14 +42,14 @@ prompt = ChatPromptTemplate.from_messages(
       """ 
       You are a research assistant that will help generate a research paper.
       Answeer the user query and use neccessary tools
-      Wrap the output in this formart and provide no other test\n{fomart_instructions}
+      Wrap the output in this formart and provide no other test\n{format_instructions}
       """,
     ),
     ("placeholder", "{chat history}"),
-    ("human","{query} {name}"),
+    ("human","{name} {query}"),
     ("placeholder","{agent_scratchpad}"),
   ]
-).partial(fomart_instructions=parser.get_format_instructions())
+).partial(format_instructions=parser.get_format_instructions())
 
 
 #function to create a simple agent
