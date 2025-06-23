@@ -46,10 +46,10 @@ prompt = ChatPromptTemplate.from_messages(
       """,
     ),
     ("placeholder", "{chat history}"),
-    ("human","{query} {name}"),
+    ("human","{name} {query}"),
     ("placeholder","{agent_scratchpad}"),
   ]
-).partial(fomart_instructions=parser.get_format_instructions())
+).partial(format_instructions=parser.get_format_instructions())
 
 
 #function to create a simple agent
