@@ -23,3 +23,33 @@ The parser creating the ResearchResponse object
 The agent returning the structured response to the user
 The diagram also includes the relevant participants (User, Agent, LLM, Parser, and ResearchResponse) and their interactions, as well as the function calls and parameter details.
 
+# Research Assistant Agent
+
+## Problem Statement
+This project creates a research assistant that answers questions and returns structured responses using large language models.
+
+## Objectives
+1. Generate consistent output in a predefined format.
+2. Support multiple LLMs like OpenAI and Anthropic.
+3. Provide clear execution feedback with an extensible agent system.
+
+## How It Works
+
+The assistant works by:
+- Using a language model to answer queries.
+- Enforcing a structured output format.
+- Optionally calling tools in the future.
+
+## Objectives
+1. Generate consistent output in a predefined format.
+2. Support multiple LLMs like OpenAI and Anthropic.
+3. Provide clear execution feedback with an extensible agent system.
+
+## How It Works
+
+The assistant works by:
+- Using a language model to answer queries.
+- Enforcing a structured output format.
+- Optionally calling tools in the future.
+
+
