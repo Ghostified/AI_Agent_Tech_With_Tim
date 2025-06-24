@@ -1,5 +1,5 @@
 Simple AI Agent:
-<img href="/home/ghost/Projects/Python/AI_Agent/codetoflow.png"></img>
+
 Here is the detailed sequence diagram for the provided code:Explanation:
 
 1. The user initiates a request to the agent, asking "What is the capital of France?" and providing their name "Alice".
